@@ -1,0 +1,6 @@
+name: astrbot_plugin_kaoyan_erzhan
+display_name: 考研二战
+desc: 让她真的在考研二战——临床医学，会厌学、会破防，也会把自己劝回去。
+version: v0.1.0
+author: pikavampire35-sys
+astrbot_version: ">=4.26.0"

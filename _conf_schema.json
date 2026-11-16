@@ -1,0 +1,48 @@
+{
+  "enabled": {
+    "description": "总开关。关掉以后不再推进状态，也不注入提示词。",
+    "type": "bool",
+    "default": true
+  },
+  "inject_mode": {
+    "description": "怎么把状态塞进提示词：append 追加在原有 system_prompt 后面；replace 整个替换（会覆盖别人格）；off 只算不注入。",
+    "type": "string",
+    "default": "append",
+    "options": ["append", "replace", "off"]
+  },
+  "target_school": {
+    "description": "她报考的学校和专业。会出现在她的话里。",
+    "type": "string",
+    "default": "南方某医科大 临床医学专硕（1051）"
+  },
+  "breakdown_fast_reply": {
+    "description": "破防时直接回一句短的（不经过模型）。真人崩的时候本来也不想多打字。",
+    "type": "bool",
+    "default": true
+  },
+  "proactive": {
+    "description": "每天 22:40 主动发一条闭馆复盘。需要同时填下面的会话 ID。",
+    "type": "bool",
+    "default": false
+  },
+  "proactive_umo": {
+    "description": "复盘发到哪个会话，填 unified_msg_origin（例如 qqbot:FriendMessage:123456）。留空则不发送。",
+    "type": "string",
+    "default": ""
+  },
+  "allow_debug": {
+    "description": "允许 /厌学、/再战 这两个调试指令手动触发崩溃。演示时可以开。",
+    "type": "bool",
+    "default": false
+  },
+  "tick_seconds": {
+    "description": "后台推进间隔（秒）。改小更细腻，但会增加写盘次数。",
+    "type": "int",
+    "default": 120
+  },
+  "state_file": {
+    "description": "自定义存档路径。留空则用 data/plugin_data/astrbot_plugin_kaoyan_erzhan/state.json。",
+    "type": "string",
+    "default": ""
+  }
+}
